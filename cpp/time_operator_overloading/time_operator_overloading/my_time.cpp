@@ -36,7 +36,7 @@ MyTime MyTime::Sum(const MyTime &time) const
 {
 	MyTime sum;
 	sum.minutes_ = minutes_ + time.minutes_;
-	sum.hours_ = (sum.minutes_ / 60) + time.hours_;
+	sum.hours_ = (sum.minutes_ / 60) + time.hours_ + hours_;
 	sum.minutes_ %= 60;
 
 	return sum;
@@ -44,5 +44,5 @@ MyTime MyTime::Sum(const MyTime &time) const
 
 void MyTime::Show() const
 {
-	std::cout << hours_ << "hours, " << minutes_ << "minutes, " << std::endl;
+	std::cout << hours_ << " hours, " << minutes_ << " minutes, " << std::endl;
 }
