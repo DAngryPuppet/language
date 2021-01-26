@@ -1,0 +1,5 @@
+#ifndef __FOUR_GENERIC_PROGRAMMING_H
+#define __FOUR_GENERIC_PROGRAMMING_H
+
+
+#endif
