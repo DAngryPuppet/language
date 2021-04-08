@@ -45,7 +45,7 @@ std::ostream &operator<< (std::ostream &os, const StringBad &st)
 	return os;
 }
 
-StringBad::StringBad(const StringBad &str)/*copy.*/
+StringBad::StringBad(const StringBad &str)/*deep copy.*/
 {
 	
 	++num_strings_;
@@ -56,7 +56,7 @@ StringBad::StringBad(const StringBad &str)/*copy.*/
 	
 }
 
-StringBad &StringBad::operator=(const StringBad &str)/*assignment.*/
+StringBad &StringBad::operator=(const StringBad &str)/*assignment operator invoked.*/
 {
 	if (this == &str)
 	{
@@ -69,4 +69,17 @@ StringBad &StringBad::operator=(const StringBad &str)/*assignment.*/
 	std::strcpy(str_, str.str_);/*copy the string.*/
 
 	return *this;/*return reference to incoking object.*/
+}
+
+/*
+*@brief        Overloading assignment operator invoked.
+*/
+StringBad &StringBad::operator=(const char *s)
+{
+	delete[] str_;
+	len_ = std::strlen(s);
+	str_ = new char[len_ + 1];
+	std::strcpy(str_, s);
+
+	return *this;
 }

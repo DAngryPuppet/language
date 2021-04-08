@@ -8,9 +8,10 @@ public:
 	friend std::ostream &operator<< (std::ostream &os, const StringBad &st);
 	StringBad(const StringBad &str);/*copy.*/
 	StringBad &operator=(const StringBad &str);/*assignment.*/
+	StringBad &operator=(const char *s);
 	int Show();
-private:
 
+private:
 	char *str_;
 	int len_;
 	static int num_strings_;
