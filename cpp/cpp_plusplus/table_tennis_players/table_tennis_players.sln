@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "table_tennis_players", "table_tennis_players.vcxproj", "{CE185B67-1A8B-407D-B875-1A0F11AAB314}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE185B67-1A8B-407D-B875-1A0F11AAB314}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CE185B67-1A8B-407D-B875-1A0F11AAB314}.Debug|Win32.Build.0 = Debug|Win32
+		{CE185B67-1A8B-407D-B875-1A0F11AAB314}.Release|Win32.ActiveCfg = Release|Win32
+		{CE185B67-1A8B-407D-B875-1A0F11AAB314}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
