@@ -20,9 +20,9 @@ int main(int argc, char *argv[])
 
 	for (int i = 0; i < kClients; i++)
 	{
-		cout << "Bnter client's account number: '";
+		cout << "Enter client's account number: '";
 		getline(cin, temp);
-		cout << "Bnter opening balance: $";
+		cout << "Enter opening balance: $";
 		cin >> temp_num;
 		cout << "Enter 1 for Barss Account or "
 			<< "2 for BassPlus Account: ";
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 
 	for (int i = 0; i < kClients; i++)
 	{
-		p_clients[i]->ViewAcct;
+		p_clients[i]->ViewAcct();
 		cout << endl;
 	}
 

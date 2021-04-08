@@ -71,23 +71,61 @@ private:
 * Base Class Using DMA.
 */
 
-class BaseDMA
+class AcctABC
 {
+protected :
+	struct Formatting
+	{
+		std::ios_base::fmtflags flag;
+		std::streamsize pr;
+	};
+
+	const std::string &FullName()const { return full_name_; }
+	long AcctNum()const { return acct_num_; }
+	Formatting SetFormat()const;
+	void Restore(Formatting &f)const;
+
 public:
-	BaseDMA(const char *label = "null",int rating=0);
-	BaseDMA(const BaseDMA &bass_DMA);
-	virtual ~BaseDMA();
-	BaseDMA &operator=(const BaseDMA &bass_DMA);
+	AcctABC(std::string full_name = "Nullbody",long acct_num = 1,double balance = 0.0f);
+	void Deposit(double amt);
+	virtual void Withdraw(double amt) = 0;
+	double Balance()const { return balance_; }
+	virtual void ViewAcct()const = 0;
+	virtual ~AcctABC() {};
 
 private:
-	char *label_;
-	int reting_;
+	std::string full_name_;
+	long acct_num_;
+	double balance_;
 };
 
-class LackDMA :public BaseDMA
+class BrassEx :public AcctABC
 {
 public:
+	BrassEx(const std::string &s = "Nullbody", long an = -1, double bal = 0.0f)
+		:AcctABC(s, an, bal)
+	{}
+
+	virtual void Withdraw(double amt);
+	virtual void ViewAcct()const;
+	virtual ~BrassEx() {};
+};
+
+class BrassPlusEx :public AcctABC
+{
+
+public:
+	BrassPlusEx(const std::string &s = "Nullbody", long an = -1, double bal = 0.0f
+		, double max_loan = 0.0f, double rate = 0.0f, double owes_bank = 0.0f);
+	virtual void Withdraw(double amt);
+	virtual void ViewAcct()const;
+
+	void ResetMax(double m) { max_loan_ = m; }
+	void ResetRate(double r) { rate_ = r; }
+	void ResetOwes() { owes_bank_ = 0; }
 
 private:
-	char color_[40];
+	double max_loan_;
+	double rate_;
+	double owes_bank_;
 };
