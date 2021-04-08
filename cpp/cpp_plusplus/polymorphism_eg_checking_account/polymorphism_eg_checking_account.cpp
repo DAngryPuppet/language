@@ -214,7 +214,7 @@ void BrassEx::Withdraw(double amt)
 void BrassEx::ViewAcct()const
 {
 	Formatting f = SetFormat();
-	cout << "Brass Client: " << FullName() << endl;
+	cout << "BrassEx Client: " << FullName() << endl;
 	cout << "Account Number: " << AcctNum() << endl;
 	cout << "Balance: " << Balance() << endl;
 	Restore(f);
@@ -258,7 +258,7 @@ void BrassPlusEx::ViewAcct()const
 {
 	Formatting f = SetFormat();
 
-	cout << "BrassPlus Client: " << FullName() << endl;
+	cout << "BrassPlusEx Client: " << FullName() << endl;
 	cout << "Account Number: " << AcctNum() << endl;
 	cout << "Balance: $" << Balance() << endl;
 	cout << "Maximum loan: $" << max_loan_ << endl;
