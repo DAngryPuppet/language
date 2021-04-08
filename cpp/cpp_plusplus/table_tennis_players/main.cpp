@@ -9,8 +9,8 @@ int main(int argc, char *argv[])
 	TableTenisPlayer player1{ "Chuck","Blizzard",true };
 	TableTenisPlayer player2{ "Tara","Boomdea",false };
 
-	RatePlayer rate_player1{ 10, "Chuck","Blizzard",true };
-	RatePlayer rate_player2{ 11, player2 };
+	RatedPlayer rate_player1{ 10, "Chuck","Blizzard",true };
+	RatedPlayer rate_player2{ 11, player2 };
 
 	TableTenisPlayer *p_player1 = NULL;
 	TableTenisPlayer &r_player2 = rate_player2;

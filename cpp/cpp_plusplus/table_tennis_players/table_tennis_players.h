@@ -18,12 +18,12 @@ private:
 	bool m_has_table_;
 };
 
-class RatePlayer :public TableTenisPlayer
+class RatedPlayer :public TableTenisPlayer
 {
 public:
-	RatePlayer(unsigned int rating, const std::string first_name, const std::string last_name,const bool has_table);
-	RatePlayer(unsigned int rating, const TableTenisPlayer & tp);
-	~RatePlayer();
+	RatedPlayer(unsigned int rating, const std::string first_name, const std::string last_name,const bool has_table);
+	RatedPlayer(unsigned int rating, const TableTenisPlayer & tp);
+	~RatedPlayer();
 
 	unsigned int rating();
 	void rset_rating(unsigned int rating);

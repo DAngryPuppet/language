@@ -18,29 +18,29 @@ TableTenisPlayer::~TableTenisPlayer()
 }
 
 
-RatePlayer::RatePlayer(unsigned int rating, const std::string first_name, const std::string last_name, const bool has_table)
+RatedPlayer::RatedPlayer(unsigned int rating, const std::string first_name, const std::string last_name, const bool has_table)
 	:TableTenisPlayer(first_name, last_name, has_table)
 {
 	rating_ = rating;
 }
 
-RatePlayer::RatePlayer(unsigned int rating, const TableTenisPlayer & tp)
+RatedPlayer::RatedPlayer(unsigned int rating, const TableTenisPlayer & tp)
 	: TableTenisPlayer(tp)
 {
 	rating_ = rating;
 }
 
-RatePlayer::~RatePlayer()
+RatedPlayer::~RatedPlayer()
 {
 
 }
 
-unsigned int RatePlayer::rating()
+unsigned int RatedPlayer::rating()
 {
 	return rating_;
 }
 
-void RatePlayer::rset_rating(unsigned int rating)
+void RatedPlayer::rset_rating(unsigned int rating)
 {
 	rating_ = rating;
 }
