@@ -107,7 +107,7 @@ Time Time::operator*(double mult)const
 	return result;
 }
 
-Time operator*(double mult, Time& time)
+Time operator*(double mult, const Time& time)
 {
 	Time result;
 	long totalminutes = time.m_hours * 60 + time.m_minutes * mult;
@@ -118,7 +118,7 @@ Time operator*(double mult, Time& time)
 	return result;
 }
 
-std::ostream& operator<<(std::ostream& os, Time& time)
+std::ostream& operator<<(std::ostream& os, const Time& time)
 {
 	os << time.m_hours << " hours " << time.m_minutes << " minutes " << std::endl;
 	return os;
