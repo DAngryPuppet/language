@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "OperatorOverloading.h"
+#include "operator_overloading.h"
 
 int main(int argc, char* argv[])
 {
