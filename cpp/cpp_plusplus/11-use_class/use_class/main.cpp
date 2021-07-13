@@ -11,12 +11,14 @@ int main(int argc, char* argv[])
 	Time time_sum;
 
 
-	time_first.Show();
-	time_two.Show();
+	//time_first.Show();
+	//time_two.Show();
+	std::cout << time_first;
+	std::cout << time_two;
 
 	time_sum = time_first+time_two;
 
-	time_sum.Show();
-
+	//time_sum.Show();
+	std::cout << time_sum;
 	return 0;
 }

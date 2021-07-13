@@ -1,4 +1,5 @@
 #pragma once
+#include <ostream>
 
 class Time
 {
@@ -14,7 +15,8 @@ public:
 	Time operator-(const Time& time)const;
 	Time operator*(double mult)const;
 	friend Time operator*(double mult, Time& time);
-	void Show() const;
+	friend void operator<<(std::ostream& os, Time& time);
+	//void Show() const;
 
 private:
 	int m_hours;
