@@ -21,7 +21,7 @@ Time::~Time()
 
 }
 
-int Time::Init(int hour, int min = 0)
+int Time::Init(int hour, int min)
 {
 	m_hours = hour;
 	m_minutes = min;

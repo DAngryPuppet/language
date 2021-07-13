@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="OperatorOverloading.cpp" />
+    <ClCompile Include="Stonewt.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OperatorOverloading.h" />
+    <ClInclude Include="stonewt.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
