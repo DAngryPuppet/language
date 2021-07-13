@@ -15,7 +15,7 @@ public:
 	Time operator-(const Time& time)const;
 	Time operator*(double mult)const;
 	friend Time operator*(double mult, Time& time);
-	friend void operator<<(std::ostream& os, Time& time);
+	friend std::ostream& operator<<(std::ostream& os, Time& time);
 	//void Show() const;
 
 private:
