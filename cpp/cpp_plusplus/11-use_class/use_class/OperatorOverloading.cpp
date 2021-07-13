@@ -6,15 +6,30 @@ Time::Time()
 {
 	m_hours = 0;
 	m_minutes = 0;
+	m_init_success = 0;
 }
 
 Time::Time(int hour, int min)
 {
 	m_hours = hour;
 	m_minutes = min;
+	m_init_success = 0;
 }
 
 Time::~Time()
+{
+
+}
+
+int Time::Init(int hour, int min = 0)
+{
+	m_hours = hour;
+	m_minutes = min;
+	m_init_success = 1;
+	return 0;
+}
+
+void Time::UnInit()
 {
 
 }

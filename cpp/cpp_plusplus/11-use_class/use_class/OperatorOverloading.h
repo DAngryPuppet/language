@@ -7,6 +7,9 @@ public:
 	Time();
 	Time(int hour, int min = 0);
 	~Time();
+	int Init(int hour, int min = 0);
+	void UnInit();
+
 	void AddMin(int min = 0);
 	void AddHr(int hour = 0);
 	void Reset(int hour = 0, int min = 0);
@@ -21,6 +24,7 @@ public:
 private:
 	int m_hours;
 	int m_minutes;
+	int m_init_success;
 };
 
 
