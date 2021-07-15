@@ -6,7 +6,7 @@ class TableTenisPlayer
 {
 public:
 	TableTenisPlayer();
-	TableTenisPlayer(const std::string first_name, const std::string last_name,const bool has_table)
+	TableTenisPlayer(const std::string &first_name, const std::string &last_name,const bool has_table)
 	{ m_first_name_ = first_name; m_last_name_ = last_name; m_has_table_ = has_table; }
 	~TableTenisPlayer();
 	void Name() const;
